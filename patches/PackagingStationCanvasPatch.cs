@@ -7,6 +7,7 @@ using Il2CppScheduleOne.Product;
 using ScheduleOne.ObjectScripts;
 using ScheduleOne.Packaging;
 using ScheduleOne.UI.Stations;
+using ScheduleOne.Product;
 #endif
 using HarmonyLib;
 using MelonLoader;

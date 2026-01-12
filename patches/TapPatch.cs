@@ -2,8 +2,8 @@
 using Il2CppScheduleOne.PlayerScripts;
 using Il2CppScheduleOne.Property;
 #elif MONO
-using ScheduleOne.Property.Utilities.Water;
 using ScheduleOne.PlayerScripts;
+using ScheduleOne.Property;
 #endif
 using HarmonyLib;
 using MelonLoader;

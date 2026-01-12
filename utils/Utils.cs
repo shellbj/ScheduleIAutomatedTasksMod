@@ -1,5 +1,7 @@
 ﻿#if IL2CPP
 using Il2CppGameKit.Utilities;
+using Il2CppInterop.Runtime.InteropTypes;
+
 #elif MONO
 using GameKit.Utilities;
 #endif
@@ -278,6 +280,26 @@ namespace AutomatedTasksMod {
 			}
 
 			return false;
+        }
+
+#if IL2CPP
+		internal static bool TypeCheck<T>(Il2CppObjectBase obj, out T value, string message = null) where T : Il2CppObjectBase {
+			T castedValue = obj.BackendTryCast<T>();
+#elif MONO
+		internal static bool TypeCheck<T>(object obj, out T value, string message = null) where T : class {
+			T castedValue = obj as T;
+#endif
+
+            if(castedValue == null) {
+                if(message != null)
+                    Melon<Mod>.Logger.Msg(message + " (" + obj.GetType().Name + ")");
+
+				value = default;
+				return true;
+            } else {
+				value = castedValue;
+				return false;
+			}
 		}
 
 		internal static System.Collections.IEnumerator SimulateKeyPress(KeyControl keyControl) {

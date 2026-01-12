@@ -9,7 +9,7 @@ using ScheduleOne.ObjectScripts;
 using ScheduleOne.Packaging;
 using ScheduleOne.PlayerScripts;
 using System.Reflection;
-using UnityEngine.UI;
+using ScheduleOne.Product;
 #endif
 using UnityEngine;
 

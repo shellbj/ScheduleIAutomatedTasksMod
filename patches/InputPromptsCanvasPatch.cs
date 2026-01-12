@@ -268,6 +268,7 @@ namespace AutomatedTasksMod {
 
 			stepComplete = false;
 			Vector3 targetPosition;
+			Pot targetPot;
 
 			//There shouldn't be more than 10 watering spots so this is a failsafe
 			for(int i = 0; i < 10; i++) {
@@ -280,10 +281,13 @@ namespace AutomatedTasksMod {
 					yield break;
 				}
 
-				if(Utils.NullCheck([wateringCan.PourPoint, wateringCan.TargetGrowContainer._pourTarget], "Can't find watering can components - probably exited task"))
+				if(Utils.NullCheck([wateringCan, wateringCan?.PourPoint, wateringCan?.TargetGrowContainer], "Can't find watering can components - probably exited task"))
 					yield break;
+				
+				if(Utils.TypeCheck(wateringCan.TargetGrowContainer, out targetPot, "Watering can grow container isn't a pot - not supported yet"))
+                    yield break;
 
-				targetPosition = wateringCan.TargetGrowContainer._pourTarget.position;
+                targetPosition = targetPot.GetCurrentTargetPosition();
 
 				moveToPosition = new Vector3(wateringCan.transform.position.x - (wateringCan.PourPoint.position.x - targetPosition.x), wateringCan.transform.position.y, wateringCan.transform.position.z - (wateringCan.PourPoint.position.z - targetPosition.z));
 
@@ -301,10 +305,13 @@ namespace AutomatedTasksMod {
 
 				//Up to 5 seconds
 				while(time < 5) {
-					if(Utils.NullCheck([wateringCan, wateringCan?.TargetGrowContainer, wateringCan?.TargetGrowContainer?._pourTarget], "Can't find watering can pot target - probably exited task"))
+					if(Utils.NullCheck([wateringCan, wateringCan?.TargetGrowContainer], "Can't find watering can pot target - probably exited task"))
 						yield break;
 
-					if(wateringCan.TargetGrowContainer._pourTarget.position != targetPosition) {
+					if(Utils.TypeCheck(wateringCan.TargetGrowContainer, out targetPot, "Watering can grow container isn't a pot - not supported yet"))
+						yield break;
+
+					if(targetPot.GetCurrentTargetPosition() != targetPosition) {
 						Melon<Mod>.Logger.Msg("Done watering target");
 						stepComplete2 = true;
 						break;
@@ -320,7 +327,7 @@ namespace AutomatedTasksMod {
 					yield break;
 				}
 
-				if(wateringCan.TargetGrowContainer._currentMoistureAmount > wateringCan.TargetGrowContainer.MoistureCapacity - wateringCan.TargetGrowContainer._moistureDrainPerHour) {
+				if(wateringCan.TargetGrowContainer.NormalizedMoistureAmount >= 1) {
 					Melon<Mod>.Logger.Msg("Done watering");
 					stepComplete = true;
 					yield break;

@@ -3,6 +3,7 @@ using Il2CppScheduleOne.Packaging;
 using Il2CppScheduleOne.Product;
 #elif MONO
 using ScheduleOne.Packaging;
+using ScheduleOne.Product;
 #endif
 using HarmonyLib;
 using MelonLoader;

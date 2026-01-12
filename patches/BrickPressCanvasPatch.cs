@@ -4,8 +4,8 @@ using Il2CppScheduleOne.UI.Stations;
 using Il2CppScheduleOne.Product;
 #elif MONO
 using ScheduleOne.ObjectScripts;
-using ScheduleOne.Packaging;
 using ScheduleOne.UI.Stations;
+using ScheduleOne.Product;
 #endif
 using HarmonyLib;
 using MelonLoader;

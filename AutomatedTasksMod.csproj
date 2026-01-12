@@ -49,9 +49,6 @@
 		<Reference Include="Il2CppAstarPathfindingProject">
 			<HintPath>K:\SteamLibrary\steamapps\common\Schedule I\MelonLoader\Il2CppAssemblies\Il2CppAstarPathfindingProject.dll</HintPath>
 		</Reference>
-		<Reference Include="Il2CppBoxophobic.AtmosphericHeightFog.Runtime">
-			<HintPath>K:\SteamLibrary\steamapps\common\Schedule I\MelonLoader\Il2CppAssemblies\Il2CppBoxophobic.AtmosphericHeightFog.Runtime.dll</HintPath>
-		</Reference>
 		<Reference Include="Il2CppBoxophobic.Utils.Scripts">
 			<HintPath>K:\SteamLibrary\steamapps\common\Schedule I\MelonLoader\Il2CppAssemblies\Il2CppBoxophobic.Utils.Scripts.dll</HintPath>
 		</Reference>
@@ -223,11 +220,11 @@
 		<Reference Include="Unity.InputSystem.ForUI">
 			<HintPath>K:\SteamLibrary\steamapps\common\Schedule I\MelonLoader\Il2CppAssemblies\Unity.InputSystem.ForUI.dll</HintPath>
 		</Reference>
-		<Reference Include="Unity.InputSystem.RebindingUI">
-			<HintPath>K:\SteamLibrary\steamapps\common\Schedule I\MelonLoader\Il2CppAssemblies\Unity.InputSystem.RebindingUI.dll</HintPath>
-		</Reference>
 		<Reference Include="Unity.Mathematics">
 			<HintPath>K:\SteamLibrary\steamapps\common\Schedule I\MelonLoader\Il2CppAssemblies\Unity.Mathematics.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.MemoryProfiler">
+			<HintPath>K:\SteamLibrary\steamapps\common\Schedule I\MelonLoader\Il2CppAssemblies\Unity.MemoryProfiler.dll</HintPath>
 		</Reference>
 		<Reference Include="Unity.Postprocessing.Runtime">
 			<HintPath>K:\SteamLibrary\steamapps\common\Schedule I\MelonLoader\Il2CppAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
@@ -517,9 +514,6 @@
 		<Reference Include="Autodesk.Fbx">
 			<HintPath>K:\SteamLibrary\steamapps\common\Schedule I\MelonLoader\Managed\Autodesk.Fbx.dll</HintPath>
 		</Reference>
-		<Reference Include="Boxophobic.AtmosphericHeightFog.Runtime">
-			<HintPath>K:\SteamLibrary\steamapps\common\Schedule I\MelonLoader\Managed\Boxophobic.AtmosphericHeightFog.Runtime.dll</HintPath>
-		</Reference>
 		<Reference Include="Boxophobic.Utils.Scripts">
 			<HintPath>K:\SteamLibrary\steamapps\common\Schedule I\MelonLoader\Managed\Boxophobic.Utils.Scripts.dll</HintPath>
 		</Reference>
@@ -645,9 +639,6 @@
 		</Reference>
 		<Reference Include="Unity.InputSystem.ForUI">
 			<HintPath>K:\SteamLibrary\steamapps\common\Schedule I\MelonLoader\Managed\Unity.InputSystem.ForUI.dll</HintPath>
-		</Reference>
-		<Reference Include="Unity.InputSystem.RebindingUI">
-			<HintPath>K:\SteamLibrary\steamapps\common\Schedule I\MelonLoader\Managed\Unity.InputSystem.RebindingUI.dll</HintPath>
 		</Reference>
 		<Reference Include="Unity.Mathematics">
 			<HintPath>K:\SteamLibrary\steamapps\common\Schedule I\MelonLoader\Managed\Unity.Mathematics.dll</HintPath>
